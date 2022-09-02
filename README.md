@@ -33,13 +33,15 @@ USE_NR=1 LIBNR_DIR=$HOME/fps/NR-utilities
 where I have set the path for Numerical Recepies (optional) utilities if you
 happen to have a valid licence to use them.
 
+A better way of activating Numerical-Recipes is using the `-n` flag to the
+FPS build script:
 ```bash
-./fps-scripts/fps-build.sh -n -- USE_APPLEBREW_OPENBLAS=1 CC=gcc-12 LIBNR_DIR=$HOME/fps/NR-utilities
+./fps-scripts/fps-build.sh -n -- USE_APPLEBREW_OPENBLAS=1 CC=gcc-12 \
+LIBNR_DIR=$HOME/fps/NR-utilities
 ```
-
-If on Linux, HomeBrew install yet again in another location, so you would use
+If on Linux, HomeBrew install yet again in another location, so you would use:
 ```bash
-$FPSSCRIPTS/fps-build.sh USE_LINUXBREW_OPENBLAS=1 \
+$FPSSCRIPTS/fps-build.sh -n -- USE_LINUXBREW_OPENBLAS=1 \
 LIBNR_DIR=$HOME/fps/NR-utilities
 ```
 
